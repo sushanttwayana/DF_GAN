@@ -18,7 +18,7 @@ nodes=1
 master_port=11111
 
 # Set the logs directory to /kaggle/working
-logs_dir=/kaggle/working
+# logs_dir=/kaggle/working
 
 # You can set CUDA_VISIBLE_DEVICES=0,1,2... to accelerate the training process if you have multiple GPUs
 CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=$nodes --master_port $master_port src/train.py \
@@ -31,4 +31,4 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=$nodes --master_port $master_po
                     --resume_model_path $resume_model_path \
                     --train $train \
                     --multi_gpus $multi_gpus \
-                    --logs_dir $logs_dir \ 
+                    # --logs_dir $logs_dir \ 
