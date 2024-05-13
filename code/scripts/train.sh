@@ -31,3 +31,4 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=$nodes --master_port $master_po
                     --resume_model_path $resume_model_path \
                     --train $train \
                     --multi_gpus $multi_gpus \
+                    --logs_dir $logs_dir \ 
